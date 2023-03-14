@@ -1,4 +1,4 @@
-DIR="inputs"
+DIR="public/inputs"
 NUM_FILES=$(ls -1 "$DIR" | wc -l)
 
 FAILS=0
@@ -14,9 +14,9 @@ do
         test="$var"
     fi
 
-    input="inputs/$test.txt"
-    output="outputs/$test.txt"
-    result="results/$test.txt"
+    input="public/inputs/$test.txt"
+    output="public/outputs/$test.txt"
+    result="public/results/$test.txt"
 
     python3 solution.py < "$input" > "$result"
     if diff -q "$result" "$output" --ignore-all-space; then
