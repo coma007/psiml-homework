@@ -26,8 +26,8 @@ The **output** consists of three numbers:
 A B C
 ```
 
-A - Total asteroid surface area  
-B - The largest asteroid surface area  
-C - The largest asteroid landing area  
+`A` - Total asteroid surface area  
+`B` - The largest asteroid surface area  
+`C` - The largest asteroid landing area  
 
 Maximum **error** allowed for largest asteroid landing area is 0.1.
