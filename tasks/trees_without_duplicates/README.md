@@ -1,5 +1,6 @@
+# Trees without duplicates
 
-# Problem statement
+## Problem statement
 
 An old computer has a filesystem that can only contain files and directories.  
 The available terminal has only three commands (they start with $ in the input):
@@ -12,13 +13,13 @@ The available terminal has only three commands (they start with $ in the input):
 
 File and directory names are composed of alphanumeric characters, dots (`.`) and underscores (`_`). As output of `ls` command, all file names start with `(f)` (example: `(f)file_name.ext`) and directory names start with `(d)` (example: `(d)dir_name.example`) without whitespaces between `(d)`/`(f)` and its name. There cannot be multiple directories with the same name listed in one directory. There cannot be multiple files with the same name listed in one directory. Someone who wrote these commands may know where some directories are located and changed them without listing first. Directories cannot be named as `..` as command `cd ..` would be ambiguous.   
 
-## Task 1: Find the number of files and directories.
+### Task 1: Find the number of files and directories.
 
 - Print the total number of directories to the standard
   - Root directory should not be counted
 - Print the total number of files to the standard output
 
-## Task 2: Draw the sorted dir tree
+### Task 2: Draw the sorted dir tree
 
 - Given a list of commands and their outputs, print the dir tree to the standard output
 - Directories come first, then files
@@ -31,7 +32,7 @@ Use one of the python built-in methods `sorted()` or `sort()` for sorting files 
 - Unsorted list: `['20', '1', '_1', '2', 'a1', '1_', '1a', '.1', 'A1', '1A', '1.', '10']`
 - Sorted list: `['.1', '1', '1.', '10', '1A', '1_', '1a', '2', '20', 'A1', '_1', 'a1']`
 
-## Task 3: Remove duplicated files
+### Task 3: Remove duplicated files
 
 - Print to standard output a minimum list of commands that removes all but the first appearance (starting from top to bottom) of each duplicated file from the dir tree
 - Avoid returning to root (`$ cd /`)
@@ -41,7 +42,7 @@ Use one of the python built-in methods `sorted()` or `sort()` for sorting files 
 - Start from the root dir (`$ cd / command`)
 - Once the last duplicated file is deleted, task is completed
 
-# Data sets
+## Data sets
 
 There are two data sets:
 
@@ -50,13 +51,13 @@ There are two data sets:
 - _Private data set_ is used for testing your solution. The final score will be measured against this data set.
 - _Private data set_ and the final score will be available after the homework finishes.
 
-# Input
+## Input
 
 Inputs are given through standard input
 
 First line is always `$ cd / `. Each line of input represents a command (starts with $) or command output.
 
-# Output
+## Output
 
 All results should be printed to the standard output. Results for each document should be printed in the following order:
 
@@ -75,8 +76,8 @@ All results should be printed to the standard output. Results for each document 
   -  Last command should be the command that removes the last duplicated file
   -  If there are no duplicated files, output of this task should be omitted.
 
-# Example
-## Input
+## Example
+### Input
 
 ```
 $ cd /   
@@ -95,7 +96,7 @@ $ ls
 $ cd dir5   
 $ ls    
 ```
-## Output
+### Output
 ```
 5  
 5  
@@ -118,14 +119,14 @@ $ rm file1
 $ cd /   
 $ rm file1  
 ```
-# Scoring
+## Scoring
 
 -  Correct result for task 1 brings 4 points per test case.
 -  Correct result for task 2 brings 10 points per test case.
 -  Correct result for task 3 brings 6 points per test case.
 
 Task 3 won't be evaluated if answers for task 1 and task 2 are not correct.
-# Constraints
+## Constraints
 
 -  Time limit is 1s.
 -  Memory limit is 64 MB.
